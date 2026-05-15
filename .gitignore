@@ -1,0 +1,9 @@
+.DS_Store
+*.mov
+
+# Not linked from the site; very large — omit from Git
+ladies night 3 (1).mp4
+
+# ~360MB — GitHub rejects files over 100MB. Keep for Netlify Drop/CLI deploy;
+# after you compress/replace (same filename), remove this line and git add it.
+ladies night 1 (1).mp4
