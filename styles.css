@@ -7,6 +7,7 @@
   --accent-soft: #7d4cff;
   --border: rgba(255, 255, 255, 0.16);
   --font-body: "Outfit", system-ui, sans-serif;
+  --font-bio: "Inter", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --ticker-h: 3.25rem;
 }
@@ -188,6 +189,33 @@ body {
   backdrop-filter: blur(8px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
   will-change: transform, opacity;
+  font-family: var(--font-bio);
+  text-align: left;
+}
+
+.bio-card h2 {
+  margin-top: 0;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  font-family: var(--font-bio);
+  font-weight: 800;
+  font-size: clamp(1.85rem, 5vw, 3.1rem);
+  letter-spacing: 0.08em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.bio-card p {
+  margin: 0 0 1.15rem;
+  font-family: var(--font-bio);
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  line-height: 1.65;
+  color: rgba(245, 242, 255, 0.88);
+}
+
+.bio-card p:last-child {
+  margin-bottom: 0;
 }
 
 h2 {
@@ -197,12 +225,6 @@ h2 {
   font-weight: 700;
   font-size: clamp(1.7rem, 4vw, 2.8rem);
   letter-spacing: 0.02em;
-}
-
-.bio-card p {
-  margin: 0.9rem 0;
-  line-height: 1.75;
-  color: #ebe5fc;
 }
 
 .js-reveal {
@@ -487,8 +509,21 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(0.5rem, 2vw, 1rem) 0;
-  gap: 0;
+  height: 100%;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(
+    180deg,
+    #06050c 0%,
+    #06050c 18%,
+    #2a0e04 42%,
+    #4a1a05 58%,
+    #7a2f0a 78%,
+    #a83c09 92%,
+    #b54a0d 100%
+  );
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.45);
 }
 
 .contact-aside-title {
@@ -497,7 +532,7 @@ video {
   font-weight: 700;
   font-size: clamp(1.75rem, 3.5vw, 2.35rem);
   letter-spacing: 0.02em;
-  color: #faf8ff;
+  color: #fff;
 }
 
 .contact-aside-lead {
@@ -505,7 +540,7 @@ video {
   max-width: 36ch;
   line-height: 1.65;
   font-size: 0.98rem;
-  color: #a69bc4;
+  color: rgba(255, 240, 230, 0.82);
 }
 
 .contact-calendly-link {
@@ -615,6 +650,30 @@ video {
   border-color: rgba(255, 255, 255, 0.28);
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.contact-aside .contact-meta-label,
+.contact-aside .contact-connect-label {
+  color: rgba(255, 235, 220, 0.65);
+}
+
+.contact-aside .contact-meta-value {
+  color: #fff;
+}
+
+.contact-aside .contact-divider {
+  border-top-color: rgba(255, 255, 255, 0.14);
+}
+
+.contact-aside .contact-social-link {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+.contact-aside .contact-social-link:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
 }
 
 .contact-social-icon {
